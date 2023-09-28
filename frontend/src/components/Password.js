@@ -4,7 +4,7 @@ import avatar from "../assets/profile.png";
 import styles from "../styles/Username.module.css";
 import toast, { Toaster } from "react-hot-toast";
 import { useFormik } from "formik";
-import { passwordValidate } from "../helper/validate";
+import { passwordValidate } from "../helper/validatejs";
 import useFetch from "../hooks/fetch.hook.js";
 import { useAuthStore } from "../store/store.js";
 import { verifyPassword } from "../helper/helper.js";

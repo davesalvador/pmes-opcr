@@ -1,11 +1,11 @@
 // import EmptyState from "../messenger/component/EmptyState.tsx";
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import useFetch from "../hooks/fetch.hook";
+import useFetch from "../hooks/fetch.hook.js";
 import { useFormik } from "formik";
-import { profileValidation } from "../helper/validate";
-import convertToBase64 from "../helper/convert";
-import { updateUser } from "../helper/helper";
+import { profileValidation } from "../helper/validatejs";
+import convertToBase64 from "../helper/convert.js";
+import { updateUser } from "../helper/helper.js";
 import toast, { Toaster } from "react-hot-toast";
 import extend from "../styles/Profile.module.css";
 import avatar from "../assets/profile.png";

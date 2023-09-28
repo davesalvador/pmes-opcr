@@ -1,0 +1,94 @@
+.glass {
+  @apply h-5/6 w-5/6;
+}
+
+.profile_img {
+  /* @apply w-40 cursor-pointer; */
+  display: flex;
+  align-items: center;
+  width: 150px;
+  height: auto;
+  border: 2px solid #763435;
+  border-radius: 1rem;
+  margin-left: 4rem;
+}
+
+.textbox {
+  @apply w-3/4;
+}
+
+/* Modal Container */
+.modalContainer {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 9999;
+}
+
+/* Modal Container - Visible */
+.modalContainer.open {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Modal Content */
+.modalContent {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border: #763435 solid 3px;
+  position: relative;
+}
+
+/* Update Button on Modal */
+.modalbtn {
+  color: #fff;
+  background-color: #763435;
+}
+
+/* Close Button for modal*/
+.closeBtn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 16px;
+  font-weight: bolder;
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  color: #763435;
+  width: 40px;
+}
+
+/*=============== BREAKPOINTS ===============*/
+/* For large devices */
+@media screen and (max-width: 992px) {
+  .profile_img {
+    margin-left: 2rem;
+    width: 120px;
+  }
+}
+
+/* For medium devices */
+@media screen and (max-width: 768px) {
+  .profile_img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 4.2rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+}
+
+/* For small devices */
+@media screen and (max-width: 350px) {
+}
