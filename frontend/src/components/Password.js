@@ -4,7 +4,7 @@ import avatar from "../assets/profile.png";
 import styles from "../styles/Username.module.css";
 import toast, { Toaster } from "react-hot-toast";
 import { useFormik } from "formik";
-import { passwordValidate } from "../helper/validatejs";
+import { passwordValidate } from "../helper/validate";
 import useFetch from "../hooks/fetch.hook.js";
 import { useAuthStore } from "../store/store.js";
 import { verifyPassword } from "../helper/helper.js";
@@ -43,8 +43,7 @@ export default function Username() {
   });
 
   // if (isLoading) return <h1 className="text-2xl font-bold">isLoading</h1>;
-  if (isLoading)
-    return <img className={styles.bsulogo} src={bsulogo} alt="Loading..." />;
+  if (isLoading) return <img className={styles.bsulogo} src = {bsulogo} alt="Loading..." />;
   if (serverError)
     return <h1 className="text-xl text-red-500">{serverError.message}</h1>;
 

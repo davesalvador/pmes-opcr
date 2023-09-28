@@ -7,13 +7,13 @@ import { AuthorizeUser, ProtectRoute } from "./middleware/auth";
 import Username from "./components/Username";
 import Reset from "./components/Reset";
 import Register from "./components/Register";
-import Recovery from "./components/Recovery.js";
-import Profile from "./components/Profile.js";
-import Password from "./components/Password.js";
-import PageNotFound from "./components/PageNotFound.js";
+import Recovery from "./components/Recovery";
+import Profile from "./components/Profile";
+import Password from "./components/Password";
+import PageNotFound from "./components/PageNotFound";
 
 /*Messenger route*/
-// import Messenger from "./messenger/messenger.js";
+import Messenger from "./messenger/messenger.js";
 
 /**root routes */
 
@@ -154,10 +154,10 @@ export default function App() {
       ),
     },
 
-    // {
-    //   path: "/messenger",
-    //   element: <Messenger />,
-    // },
+    {
+      path: "/messenger",
+      element: <Messenger />,
+    },
   ]);
   return (
     <main>

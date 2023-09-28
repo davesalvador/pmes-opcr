@@ -4,7 +4,7 @@ import avatar from "../assets/profile.png";
 import styles from "../styles/Username.module.css";
 import { Toaster } from "react-hot-toast";
 import { useFormik } from "formik";
-import { usernameValidate } from "../helper/validatejs";
+import { usernameValidate } from "../helper/validate";
 import { useAuthStore } from "../store/store.js";
 
 export default function Username() {
@@ -49,7 +49,7 @@ export default function Username() {
         </button>
 
         <button type="submit" className="submit2">
-          <Link to="/Register"> Sign Up</Link>
+        <Link to="/Register"> Sign Up</Link>
         </button>
       </form>
     </>

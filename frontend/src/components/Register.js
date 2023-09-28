@@ -4,10 +4,10 @@ import avatar from "../assets/profile.png";
 import styles from "../styles/Username.module.css";
 import toast, { Toaster } from "react-hot-toast";
 import { useFormik } from "formik";
-import { registerValidation } from "../helper/validatejs";
-import convertToBase64 from "../helper/convert.js";
+import { registerValidation } from "../helper/validate";
+import convertToBase64 from "../helper/convert";
 
-import { registerUser } from "../helper/helper.js";
+import { registerUser } from "../helper/helper";
 
 export default function Register() {
   const navigate = useNavigate();
@@ -27,15 +27,15 @@ export default function Register() {
       values = await Object.assign(values, { profile: file || "" });
       //   values = await Object.assign(values, { esignature: esignature || "" });
       //   // console.log(values);
-      let registerPromise = registerUser(values);
-      toast.promise(registerPromise, {
-        loading: "Creating...",
-        success: <b>Register Successfully...!</b>,
-        error: <b>Could not register</b>,
-      });
-      registerPromise.then(function () {
-        navigate("/");
-      });
+        let registerPromise = registerUser(values);
+        toast.promise(registerPromise, {
+          loading: "Creating...",
+          success: <b>Register Successfully...!</b>,
+          error: <b>Could not register</b>,
+        });
+        registerPromise.then(function () {
+          navigate("/");
+        });
       // console.log(values);
     },
   });
