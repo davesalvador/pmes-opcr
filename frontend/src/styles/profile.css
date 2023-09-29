@@ -67,7 +67,7 @@
 }
 
 .profile_connections {
-  font-size: .75rem;
+  font-size: 0.75rem;
 }
 
 .profile_details {
@@ -116,38 +116,37 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
-
 /*=============== BREAKPOINTS ===============*/
 /* For large devices */
 @media screen and (max-width: 992px) {
-    .button_container button {
-        width: 75px;
-        font-size: .75rem;
-    }
-    .profile_topbar-container {
-      padding: .75rem 0.5rem;
-    }
-    
-    .profile_section1 button {
-      width: 150px;
-    }
-    
-    .profile_name {
-      font-size: 1.25rem;
-    }
-    
-    .profile_username {
-      font-size: .75rem;
-    }
-    
-    .profile_connections {
-      font-size: .75rem;
-    }
+  .button_container button {
+    width: 75px;
+    font-size: 0.75rem;
+  }
+  .profile_topbar-container {
+    padding: 0.75rem 0.5rem;
+  }
 
-    .profile_details {
-      font-size: .75rem;
-      padding-left: 1rem;
-    }
+  .profile_section1 button {
+    width: 150px;
+  }
+
+  .profile_name {
+    font-size: 1.25rem;
+  }
+
+  .profile_username {
+    font-size: 0.75rem;
+  }
+
+  .profile_connections {
+    font-size: 0.75rem;
+  }
+
+  .profile_details {
+    font-size: 0.75rem;
+    padding-left: 1rem;
+  }
 }
 
 /* For medium devices */
@@ -161,11 +160,11 @@
     align-items: center;
     justify-content: center;
   }
-  
+
   .profile_topbar-container {
     width: 100%;
   }
-  
+
   .profile_section1 {
     flex-direction: column;
     display: flex;
@@ -188,96 +187,95 @@
   }
 
   /* hamburger menu */
-.menu-toggle {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 30px;
-  height: 25px;
-  cursor: pointer;
-}
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+  }
 
-.bar {
-  width: 100%;
-  height: 3px;
-  background-color: #f9f9f9;
-  margin: 3px 0;
-  transition: transform 0.3s ease-in-out;
-}
+  .bar {
+    width: 100%;
+    height: 3px;
+    background-color: #f9f9f9;
+    margin: 3px 0;
+    transition: transform 0.3s ease-in-out;
+  }
 
-.open .bar:nth-child(1) {
-  transform: rotate(35deg)
-}
+  .open .bar:nth-child(1) {
+    transform: rotate(35deg);
+  }
 
-.open .bar:nth-child(2) {
-  opacity: 0;
-}
+  .open .bar:nth-child(2) {
+    opacity: 0;
+  }
 
-.open .bar:nth-child(3) {
-  transform: rotate(-35deg)
-}
+  .open .bar:nth-child(3) {
+    transform: rotate(-35deg);
+  }
 
-.menu {
-  display: none;
-}
+  .menu {
+    display: none;
+  }
 
-.menu ul {
-  flex-direction: column;
-}
+  .menu ul {
+    flex-direction: column;
+  }
 
-.menu button {
-  margin-left: 5px; /* Adjust margin as needed */
-  width: 100px;
-  padding: 0 0.25rem;
-  border: 2px solid white;
-}
+  .menu button {
+    margin-left: 5px; /* Adjust margin as needed */
+    width: 100px;
+    padding: 0 0.25rem;
+    border: 2px solid white;
+  }
 
-.menu.active {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  position: absolute;
-  top: 50px;
-  right: 0;
-  padding: 10px;
-}
+  .menu.active {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    padding: 10px;
+  }
 
-.menu.active ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
+  .menu.active ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
 
-.menu.active ul li {
-  margin-bottom: 10px;
-}
+  .menu.active ul li {
+    margin-bottom: 10px;
+  }
 
-.menu.active ul li button {
-  text-decoration: none;
-  color: #f9f9f9;
-  background-color: #763435;
-}
-/* end of hamburger menu */
+  .menu.active ul li button {
+    text-decoration: none;
+    color: #f9f9f9;
+    background-color: #763435;
+  }
+  /* end of hamburger menu */
 }
 
 @media screen and (max-width: 576px) {
-    .pdologo{
-        height: 45px;
-        width: auto;
-    }
-
+  .pdologo {
+    height: 45px;
+    width: auto;
+  }
 }
 
 /* For small devices */
 @media screen and (max-width: 350px) {
-    .menu button {
-        width: 70px;
-        font-size: .75rem;
-    }
+  .menu button {
+    width: 70px;
+    font-size: 0.75rem;
+  }
 
-    .pdologo{
-        height: 40px;
-        width: auto;
-    }
+  .pdologo {
+    height: 40px;
+    width: auto;
+  }
 }
