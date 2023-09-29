@@ -16,9 +16,9 @@ export default function Register() {
 
   const formik = useFormik({
     initialValues: {
-      email: "doyol56239@cnogs.com",
-      username: "example123",
-      password: "admin@123",
+      email: "",
+      username: "",
+      password: "",
     },
     validate: registerValidation,
     validateOnBlur: false,
@@ -27,15 +27,15 @@ export default function Register() {
       values = await Object.assign(values, { profile: file || "" });
       //   values = await Object.assign(values, { esignature: esignature || "" });
       //   // console.log(values);
-        let registerPromise = registerUser(values);
-        toast.promise(registerPromise, {
-          loading: "Creating...",
-          success: <b>Register Successfully...!</b>,
-          error: <b>Could not register</b>,
-        });
-        registerPromise.then(function () {
-          navigate("/");
-        });
+      let registerPromise = registerUser(values);
+      toast.promise(registerPromise, {
+        loading: "Creating...",
+        success: <b>Register Successfully...!</b>,
+        error: <b>Could not register</b>,
+      });
+      registerPromise.then(function () {
+        navigate("/");
+      });
       // console.log(values);
     },
   });
@@ -80,7 +80,7 @@ export default function Register() {
             {...formik.getFieldProps("username")}
             className={styles.textbox}
             type="username"
-            placeholder="Username*"
+            // placeholder="Username*"
           />
         </label>
         <label>
@@ -89,7 +89,7 @@ export default function Register() {
             {...formik.getFieldProps("email")}
             className={styles.textbox}
             type="text"
-            placeholder="Email*"
+            // placeholder="Email*"
           />
         </label>
         <label>
@@ -98,7 +98,7 @@ export default function Register() {
             {...formik.getFieldProps("password")}
             className={styles.textbox}
             type="password"
-            placeholder="Password*"
+            // placeholder="Password*"
           />
         </label>
         <button type="submit" className="submit">
