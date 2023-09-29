@@ -33,9 +33,19 @@ export default function Register() {
         success: <b>Register Successfully...!</b>,
         error: <b>Could not register</b>,
       });
-      registerPromise.then(function () {
-        navigate("/");
-      });
+      // registerPromise.then(function () {
+      //   navigate("/");
+      // });
+
+      //changed
+      registerPromise
+        .then(() => {
+          navigate("/");
+          window.location.reload();
+        })
+        .catch((error) => {
+          console.error("Error during registration:", error);
+        });
       // console.log(values);
     },
   });
