@@ -49,7 +49,7 @@ export default function Username() {
         </button>
 
         <button type="submit" className="submit2">
-        <Link to="/Register"> Sign Up</Link>
+          <Link to="/Register"> Sign Up</Link>
         </button>
       </form>
     </>
