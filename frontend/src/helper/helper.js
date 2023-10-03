@@ -43,12 +43,13 @@ export async function registerUser(credentials) {
       data: { msg },
       status,
     } = await api.post(`/api/register`, credentials);
-    let { username, email } = credentials;
+    let { username, email, institute } = credentials;
     /**send email */
     if (status === 201) {
       await api.post("/api/registerMail", {
         username,
         userEmail: email,
+        institute,
         text: msg,
       });
     }

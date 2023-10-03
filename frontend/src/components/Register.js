@@ -6,19 +6,22 @@ import toast, { Toaster } from "react-hot-toast";
 import { useFormik } from "formik";
 import { registerValidation } from "../helper/validate";
 import convertToBase64 from "../helper/convert";
-
 import { registerUser } from "../helper/helper";
+import institutes from "../utils/institutes";
 
 export default function Register() {
   const navigate = useNavigate();
   const [file, setFile] = useState();
   // const [esignature, setEsignature] = useState();
 
+  institutes.sort((a, b) => a.institute.localeCompare(b.institute));
+
   const formik = useFormik({
     initialValues: {
       email: "",
       username: "",
       password: "",
+      institute: "",
     },
     validate: registerValidation,
     validateOnBlur: false,
@@ -93,6 +96,7 @@ export default function Register() {
             // placeholder="Username*"
           />
         </label>
+
         <label>
           <span>Email</span>
           <input
@@ -110,6 +114,27 @@ export default function Register() {
             type="password"
             // placeholder="Password*"
           />
+        </label>
+
+        <label>
+          <span>Institute</span>
+          <select
+            {...formik.getFieldProps("institute")}
+            className="institute_list"
+          >
+            <option value="" className="centered_option">
+              Select your institute
+            </option>
+            {institutes.map((institute) => (
+              <option
+                key={institute._id_}
+                value={institute.institute}
+                className="institute_option"
+              >
+                {institute.institute}
+              </option>
+            ))}
+          </select>
         </label>
         <button type="submit" className="submit">
           Sign Up

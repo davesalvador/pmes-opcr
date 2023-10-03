@@ -22,6 +22,7 @@ export const UserSchema = new mongoose.Schema({
   address: { type: String },
   profile: { type: String },
   esignature: { type: String },
+  institute: { type: String },
 });
 
 export default mongoose.model.Users || mongoose.model("User", UserSchema);
