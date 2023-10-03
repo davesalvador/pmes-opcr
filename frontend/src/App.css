@@ -351,13 +351,13 @@ select {
   }
 
   .submit {
-    width: 80px;
+    width: 270px;
   }
 
   .submit2 {
     display: block;
     margin: 0 auto;
-    width: 80px;
+    width: 270px;
     height: 36px;
     border-radius: 30px;
     color: #fff;
