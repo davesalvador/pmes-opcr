@@ -38,6 +38,7 @@ const Profile = () => {
       mobile: apiData?.mobile || "",
       address: apiData?.address || "",
       username: apiData?.username || "",
+      institute: apiData?.institute || "",
     },
     enableReinitialize: true,
     validate: profileValidation,
@@ -240,6 +241,10 @@ const Profile = () => {
             <div className="profile_details">
               <p className="profile_institution">
                 <i class="uil uil-building"></i>Bulacan State University
+              </p>
+              <p className="profile_email">
+                <i class="uil uil-bag"></i>
+                {apiData?.institute}
               </p>
               <p className="profile_address">
                 <i class="uil uil-location-point"></i>
