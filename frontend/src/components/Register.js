@@ -8,6 +8,7 @@ import { registerValidation } from "../helper/validate";
 import convertToBase64 from "../helper/convert";
 import { registerUser } from "../helper/helper";
 import institutes from "../utils/institutes";
+import clickMe from "../assets/clickMe.png";
 
 export default function Register() {
   const navigate = useNavigate();
@@ -73,6 +74,7 @@ export default function Register() {
             htmlFor="profile"
             // accept="image/*"
           >
+            <img src={clickMe} className="clickMe" alt="Click Me" />
             <img
               src={file || avatar}
               className={styles.avatar}
