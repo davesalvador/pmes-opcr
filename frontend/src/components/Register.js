@@ -15,6 +15,7 @@ export default function Register() {
   const [file, setFile] = useState();
   // const [esignature, setEsignature] = useState();
 
+  //institute sorting
   institutes.sort((a, b) => a.institute.localeCompare(b.institute));
 
   const formik = useFormik({
