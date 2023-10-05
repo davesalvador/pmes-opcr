@@ -67,9 +67,9 @@ export default function Register() {
   return (
     <div className="registerContainer">
       <Toaster position="top-center" reverseOrder={false}></Toaster>
-      <h2>Create Account</h2>
+      <h2 className="registerTitle">Create Account</h2>
       <form onSubmit={formik.handleSubmit}>
-        <div className="profile flex justify-center py-4">
+        <div className="profile flex justify-center py-6">
           <label
             // class="inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded cursor-pointer"
             htmlFor="profile"
@@ -141,6 +141,9 @@ export default function Register() {
         </label>
         <button type="submit" className="submit">
           Sign Up
+        </button>
+        <button className="mobile-login-button">
+          <Link to="/"> Login</Link>
         </button>
       </form>
     </div>

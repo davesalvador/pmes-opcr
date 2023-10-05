@@ -386,13 +386,50 @@ select {
 
 .clickMe {
   position: absolute;
-  top: 17%;
-  left: 58%;
+  top: 11%;
+  left: 59%;
   transform: translate(-50%, -50%) rotate(45deg);
   width: 10%; /* Adjust the width as needed to fit your design */
   cursor: pointer; /* Optional: to indicate it's clickable */
 }
 
-/* .registerContainer {
-  margin-top: -5px;
-} */
+.registerContainer {
+  margin-top: -15px;
+  display: flex;
+  flex-direction: column;
+}
+/* Initially, hide the mobile login button */
+.mobile-login-button {
+  display: none;
+  color: #763435;
+  /* margin-bottom: 50px */
+}
+
+/* When screen width is 768px or less (common breakpoint for mobile views), display the login button */
+@media (max-width: 768px) {
+  .mobile-login-button {
+    /* display: block; */
+    display: flex;
+    justify-content: center;
+  }
+}
+
+/* .registerTitle {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  position: absolute;
+  /* top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0; */
+/* margin-top: 15px; */
+/* } */
+
+.registerTitle {
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%); /* Center only horizontally */
+  text-align: center;
+}
