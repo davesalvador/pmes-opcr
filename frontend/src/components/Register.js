@@ -65,7 +65,7 @@ export default function Register() {
   //   // setEsignature(base64);
   // };
   return (
-    <>
+    <div className="registerContainer">
       <Toaster position="top-center" reverseOrder={false}></Toaster>
       <h2>Create Account</h2>
       <form onSubmit={formik.handleSubmit}>
@@ -140,9 +140,9 @@ export default function Register() {
           </select>
         </label>
         <button type="submit" className="submit">
-          Sign Up.
+          Sign Up
         </button>
       </form>
-    </>
+    </div>
   );
 }

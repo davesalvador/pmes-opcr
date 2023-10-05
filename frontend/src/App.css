@@ -387,8 +387,12 @@ select {
 .clickMe {
   position: absolute;
   top: 17%;
-  left: 60%;
+  left: 58%;
   transform: translate(-50%, -50%) rotate(45deg);
   width: 10%; /* Adjust the width as needed to fit your design */
   cursor: pointer; /* Optional: to indicate it's clickable */
 }
+
+/* .registerContainer {
+  margin-top: -5px;
+} */
