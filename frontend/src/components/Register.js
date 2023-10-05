@@ -140,7 +140,7 @@ export default function Register() {
           </select>
         </label>
         <button type="submit" className="submit">
-          Sign Up
+          Sign Up.
         </button>
       </form>
     </>
