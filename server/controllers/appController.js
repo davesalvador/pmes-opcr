@@ -164,6 +164,7 @@ export async function updateUser(req, res) {
 /* GET: http://localhost:8000/api/generateOTP */
 export async function generateOTP(req, res) {
   // res.json("generateOTP route");
+  req.app.locals.resetSession = true; // Start the reset session
   req.app.locals.OTP = await otpGenarator.generate(6, {
     lowerCaseAlphabets: false,
     upperCaseAlphabets: false,
