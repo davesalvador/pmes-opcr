@@ -43,7 +43,8 @@ export default function Username() {
   });
 
   // if (isLoading) return <h1 className="text-2xl font-bold">isLoading</h1>;
-  if (isLoading) return <img className={styles.bsulogo} src = {bsulogo} alt="Loading..." />;
+  if (isLoading)
+    return <img className={styles.bsulogo} src={bsulogo} alt="Loading..." />;
   if (serverError)
     return <h1 className="text-xl text-red-500">{serverError.message}</h1>;
 
@@ -75,6 +76,16 @@ export default function Username() {
         <button type="submit" className="submit">
           Sign In
         </button>
+        <div className="text-center mt-5">
+          {" "}
+          {/*Forgot Passowrd - Dodge */}
+          <span className="text-gray-500 ">
+            Forgot Password?
+            <Link className="text-red-500 ml-2 pt" to="/recovery">
+              Recover Now{" "}
+            </Link>
+          </span>
+        </div>
       </form>
     </>
   );
