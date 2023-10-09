@@ -158,6 +158,14 @@ export default function App() {
       path: "/messenger",
       element: <Messenger />,
     },
+    {
+      path: "/recovery",
+      element: <Recovery></Recovery>,
+    },
+    {
+      path: "/reset",
+      element: <Reset></Reset>,
+    },
   ]);
   return (
     <main>
