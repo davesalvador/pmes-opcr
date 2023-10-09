@@ -82,7 +82,10 @@ function emailVerify(error = {}, values) {
     error.email = toast.error("Email Required...!");
   } else if (values.email.includes(" ")) {
     error.email = toast.error("Wrong Email...!");
-  } else if (!values.email.endsWith("@bulsu.edu.ph")) {
+  } else if (
+    !values.email.endsWith("@bulsu.edu.ph") &&
+    !values.email.endsWith("@gmail.com")
+  ) {
     error.email = toast.error("Invalid Email Address...!");
   } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
     error.email = toast.error("Invalid Email address...!");
