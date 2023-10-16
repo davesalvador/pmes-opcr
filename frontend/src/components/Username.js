@@ -35,7 +35,9 @@ export default function Username() {
           <img className={styles.avatar} src={avatar} alt="avatar" />
         </div>
         <label>
-          <span>Username</span>
+          <span style={{ color: formik.values.username ? "#763435" : "" }}>
+            Username
+          </span>
           <input
             {...formik.getFieldProps("username")}
             type="text"
