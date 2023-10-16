@@ -91,7 +91,9 @@ export default function Register() {
           </label>
         </div>
         <label>
-          <span>Username</span>
+          <span style={{ color: formik.values.username ? "#763435" : "" }}>
+            Username
+          </span>
           <input
             {...formik.getFieldProps("username")}
             className={styles.textbox}
@@ -101,7 +103,9 @@ export default function Register() {
         </label>
 
         <label>
-          <span>Email</span>
+          <span style={{ color: formik.values.email ? "#763435" : "" }}>
+            Email
+          </span>
           <input
             {...formik.getFieldProps("email")}
             className={styles.textbox}
@@ -110,7 +114,9 @@ export default function Register() {
           />
         </label>
         <label>
-          <span>Password</span>
+          <span style={{ color: formik.values.password ? "#763435" : "" }}>
+            Password
+          </span>
           <input
             {...formik.getFieldProps("password")}
             className={styles.textbox}
@@ -120,7 +126,9 @@ export default function Register() {
         </label>
 
         <label>
-          <span>Institute</span>
+          <span style={{ color: formik.values.institute ? "#763435" : "" }}>
+            Institute
+          </span>
           <select
             {...formik.getFieldProps("institute")}
             className="institute_list"
