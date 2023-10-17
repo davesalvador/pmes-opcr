@@ -64,7 +64,9 @@ export default function Username() {
           />
         </div>
         <label>
-          <span>Password</span>
+          <span style={{ color: formik.values.password ? "#763435" : "" }}>
+            Password
+          </span>
           <input
             {...formik.getFieldProps("password")}
             className={styles.textbox}
