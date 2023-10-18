@@ -11,6 +11,8 @@ import institutes from "../utils/institutes";
 import clickMe from "../assets/clickMe.png";
 
 export default function Register() {
+  const [usernameFocused, setUsernameFocused] = useState(false);
+
   const navigate = useNavigate();
   const [file, setFile] = useState();
   // const [esignature, setEsignature] = useState();
@@ -96,9 +98,19 @@ export default function Register() {
           </span>
           <input
             {...formik.getFieldProps("username")}
-            className={styles.textbox}
+            style={
+              usernameFocused
+                ? {
+                    boxShadow: "0px 25px 10px rgba(0, 0, 0, 0.2)",
+                    transition: "box-shadow 0.3s ease-in-out",
+                  }
+                : {
+                    transition: "box-shadow 0.3s ease-in-out",
+                  }
+            }
+            onFocus={() => setUsernameFocused(true)}
+            onBlur={() => setUsernameFocused(false)}
             type="username"
-            // placeholder="Username*"
           />
         </label>
 
