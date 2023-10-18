@@ -32,47 +32,47 @@ input[type='file']{
 } */
 
 .avatar {
-    width: 100%;
-    max-width: 100px;
-    height: 100px;
-    border-radius: 50%;
-   
-    @apply border-4 border-gray-100 w-[135px] rounded-full shadow-lg cursor-pointer mx-auto;
-  }
+  width: 100%;
+  max-width: 100px;
+  height: 100px;
+  border-radius: 50%;
 
-  .avatar:hover {
-    border-color: #763435;
-    background: #763435;
-  }
+  @apply border-4 border-gray-100 w-[135px] rounded-full shadow-lg cursor-pointer mx-auto;
+}
 
-  input[type='file']{
-    display: none;
-} 
+.avatar:hover {
+  border-color: #763435;
+  background: #763435;
+}
+
+input[type="file"] {
+  display: none;
+}
 
 .bsulogo {
-    height: 150px;
-    width: auto;
-    margin: 150px 0 0 200px;
-    animation: rotate 3000ms infinite linear;
+  height: 150px;
+  width: auto;
+  margin: 150px 0 0 200px;
+  animation: rotate 3000ms infinite linear;
 }
 
 @keyframes rotate {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
+  0% {
+    transform: rotate(0deg);
   }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 
 @media screen and (max-width: 1024px) {
-    .bsulogo {
-        margin: 100px 0 0 90px;
-    }
+  .bsulogo {
+    margin: 100px 0 0 90px;
+  }
 }
 
 @media screen and (max-width: 768px) {
-    .bsulogo {
-        margin: 100px 0 0 100px;
-    }
+  .bsulogo {
+    margin: 100px 0 0 100px;
+  }
 }
