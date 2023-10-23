@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import avatar from "../assets/profile.png";
 import styles from "../styles/Username.module.css";
@@ -8,7 +8,8 @@ import { usernameValidate } from "../helper/validate";
 import { useAuthStore } from "../store/store.js";
 
 export default function Username() {
-  const setUsername = useAuthStore((state) => state.setUsername);
+  // const setUsername = useAuthStore((state) => state.setUsername);
+  const { setUsername } = useAuthStore();
   const navigate = useNavigate();
 
   const formik = useFormik({
@@ -18,39 +19,35 @@ export default function Username() {
     validate: usernameValidate,
     validateOnBlur: false,
     validateOnChange: false,
-    onSubmit: async (values) => {
-      // console.log(values);
+    onSubmit: (values) => {
       setUsername(values.username);
-      console.log(values);
       navigate("/password");
     },
   });
 
+  const { getFieldProps, values } = formik;
+  const isUsernameEntered = values.username;
+
   return (
     <>
-      <Toaster position="top-center" reverseOrder={false}></Toaster>
+      <Toaster position="top-center" reverseOrder={false} />
       <h2>Welcome back,</h2>
       <form className="py-1" onSubmit={formik.handleSubmit}>
         <div className={`${styles.profile} flex justify-center py-4`}>
           <img className={styles.avatar} src={avatar} alt="avatar" />
         </div>
         <label>
-          <span style={{ color: formik.values.username ? "#763435" : "" }}>
+          <span className={isUsernameEntered ? styles.enteredUsername : ""}>
             Username
           </span>
-          <input
-            {...formik.getFieldProps("username")}
-            type="text"
-            name="username"
-            // placeholder="Username"
-          />
+          <input {...getFieldProps("username")} type="text" />
         </label>
 
         <button type="submit" className="submit">
           Sign In
         </button>
 
-        <button type="submit" className="submit2">
+        <button className="submit2">
           <Link to="/Register"> Sign Up</Link>
         </button>
       </form>
