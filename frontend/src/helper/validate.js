@@ -93,5 +93,3 @@ function emailVerify(error = {}, values) {
 
   return error;
 }
-
-//need to work on this
