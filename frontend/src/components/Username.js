@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import avatar from "../assets/profile.png";
 import styles from "../styles/Username.module.css";
@@ -9,6 +9,8 @@ import { useAuthStore } from "../store/store.js";
 
 export default function Username() {
   // const setUsername = useAuthStore((state) => state.setUsername);
+
+  const [usernameFocused, setUsernameFocused] = useState(false);
   const { setUsername } = useAuthStore();
   const navigate = useNavigate();
 
@@ -25,9 +27,6 @@ export default function Username() {
     },
   });
 
-  const { getFieldProps, values } = formik;
-  const isUsernameEntered = values.username;
-
   return (
     <>
       <Toaster position="top-center" reverseOrder={false} />
@@ -37,10 +36,26 @@ export default function Username() {
           <img className={styles.avatar} src={avatar} alt="avatar" />
         </div>
         <label>
-          <span className={isUsernameEntered ? styles.enteredUsername : ""}>
+          {/* <span className={isUsernameEntered ? styles.enteredUsername : ""}> */}
+          <span style={{ color: formik.values.username ? "#763435" : "" }}>
             Username
           </span>
-          <input {...getFieldProps("username")} type="text" />
+          <input
+            {...formik.getFieldProps("username")}
+            style={
+              usernameFocused
+                ? {
+                    boxShadow: "0px 25px 10px rgba(0, 0, 0, 0.2)",
+                    transition: "box-shadow 0.3s ease-in-out",
+                  }
+                : {
+                    transition: "box-shadow 0.3s ease-in-out",
+                  }
+            }
+            onFocus={() => setUsernameFocused(true)}
+            onBlur={() => setUsernameFocused(false)}
+            type="text"
+          />
         </label>
 
         <button type="submit" className="submit">
