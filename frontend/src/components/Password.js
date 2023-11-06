@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import avatar from "../assets/profile.png";
 import styles from "../styles/Username.module.css";
@@ -11,6 +11,7 @@ import { verifyPassword } from "../helper/helper.js";
 import bsulogo from "../assets/BSU.png";
 
 export default function Username() {
+  const [passwordFocused, setPasswordFocused] = useState(false);
   const navigate = useNavigate();
   const { username } = useAuthStore((state) => state.auth);
   const [{ isLoading, apiData, serverError }] = useFetch(`/user/${username}`);
@@ -71,7 +72,19 @@ export default function Username() {
             {...formik.getFieldProps("password")}
             className={styles.textbox}
             type="password"
+            style={
+              passwordFocused
+                ? {
+                    boxShadow: "0px 25px 10px rgba(0, 0, 0, 0.2)",
+                    transition: "box-shadow 0.3s ease-in-out",
+                  }
+                : {
+                    transition: "box-shadow 0.3s ease-in-out",
+                  }
+            }
             // placeholder="Password"
+            onFocus={() => setPasswordFocused(true)}
+            onBlur={() => setPasswordFocused(false)}
           />
         </label>
 
