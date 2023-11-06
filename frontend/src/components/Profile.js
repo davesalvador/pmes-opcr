@@ -243,15 +243,15 @@ const Profile = () => {
                 <i class="uil uil-building"></i>Bulacan State University
               </p>
               <p className="profile_email">
-                <i class="uil uil-bag"></i>
+                <i className="uil uil-bag"></i>
                 {apiData?.institute}
               </p>
               <p className="profile_address">
-                <i class="uil uil-location-point"></i>
+                <i className="uil uil-location-point"></i>
                 {apiData?.address}
               </p>
               <p className="profile_email">
-                <i class="uil uil-envelope-alt"></i>
+                <i className="uil uil-envelope-alt"></i>
                 {apiData?.email}
               </p>
             </div>
