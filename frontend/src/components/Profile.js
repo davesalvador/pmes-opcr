@@ -14,6 +14,7 @@ import pdologo from "../assets/PDOLOGO3.png";
 import "../styles/profile.css";
 
 const Profile = () => {
+  const [isButtonDisabled, setButtonDisabled] = useState(false);
   const [file, setFile] = useState();
   const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
@@ -225,7 +226,15 @@ const Profile = () => {
           <div className="profile_topbar-container">
             <div className="profile_section1">
               {" "}
-              <button type="submit">Connect</button>
+              {/* <button type="submit">Connect</button>
+               */}
+              <button
+                type="submit"
+                disabled={isButtonDisabled}
+                onClick={() => setButtonDisabled(true)}
+              >
+                Connect
+              </button>
               <button onClick={handleModalOpen}>Update</button>
               <p className="profile_name">
                 {apiData?.firstName} {apiData?.lastName}
